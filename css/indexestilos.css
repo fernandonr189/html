@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header{
+    background-image: url("../imagenes/fondo.jpg");
+    background-size: cover;
+    height: 600px;
+    border-bottom: solid;
+    border-color: #3C6255;
+    border-width: 1rem;
+}
+/* -------------------------------- NAV --------------------------------*/
+nav{
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 25px #373737;
+    max-height: 85px;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+nav ul li{
+    display: inline-block;
+    text-align: center;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 2rem;
+    color: #FFFFFF;
+    display: block;
+    max-height: 80px;
+    max-width: 135px;
+}
+nav ul li a:hover{
+    box-shadow: 0 0 25px #373737;
+    border: solid;
+    border-color: #FFFFFF;
+}
+#logo{
+    width: 20%;
+    min-width: 200px;
+    height: auto;
+    margin-top: 3rem;
+    
+}
+/*-------------------------------- CUERPO --------------------------------*/
+
+.info{
+    width: 60%;
+    background-color: #A6BB8D;
+    padding: 5rem;
+    margin: 3rem auto;
+    border:solid;
+    border-color: #61876E;
+    border-radius: 3rem;
+    border-width: .5rem;
+    display: flex;
+}
+.texto{
+    background-color: #EAE7B1;
+    padding: 1rem;
+    border-radius: 0 3rem 3rem 0;
+}
+.imagen{
+    background-color: #E1EEDD;
+    border-radius: 3rem 0 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/*-------------------------------- FOOTER --------------------------------*/
+footer{
+    margin-top: 5em;
+    background-color: #373737;
+    padding: 2em;
+    color: #FFFFFF;
+}
+#redescontenedor{
+    margin-top: 2rem;
+}
+#redes{
+    margin-top: 2rem;
+}
+.red{
+    margin: 0 1rem;
+}
+.logoredes{
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+
+/*Paleta de colores
+3C6255 Verde fuerte
+61876E
+A6BB8D
+EAE7B1 Crema
+
+
+373737 negro/gris
+E1EEDD blanco grisaseo
+
+
+
+
+
+
+
+
+
+/*
+body
+{
+  background-color: whitesmoke;
+}
+header{
+    margin: 0em auto;
+    background-color: #373737;
+    padding: 1em;
+    margin-bottom: 5em;
+    color: #E9E7DA;
+}
+h2{
+    margin-bottom: 1em;
+}
+
+section{
+    padding-bottom: 10em;
+    padding-top: 10em;
+}
+table{
+    background-color:#E9E7DA;
+    border: solid;
+    border-color: #000000
+}
+thead{
+    color:#FFFFFF;
+}
+th{
+    background-color: #373737;
+    padding: 1em;
+}
+tr{
+    border: solid;
+    border-color: #000000;
+}
+td{
+    border: solid;
+    border-color: #000000;
+    padding: 1em;
+}
+.info{
+    width: 50%;
+    background-color: #C0B283;
+    padding: 10em;
+    margin-bottom: 10em;
+}
+nav{
+	background-color:#373737;
+    display: flex;
+    justify-content: center;	
+}
+nav ul{
+    overflow: hidden;
+	list-style: none;
+    margin: 0em auto;
+}
+nav ul li{
+	float: left;
+}
+nav ul li a{
+	color: #E9E7DA;
+	padding: 1.5em;
+	display: block;
+	text-decoration: none;
+}
+nav ul li a:hover{
+background: #C0B283;
+color: #000000
+}
+ul{
+    overflow: hidden;
+    list-style: none;
+    margin: 0em auto;
+}
+nav ul li{
+    float: left;
+}
+ul li a{
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.formulario{
+    background-color: #C0B283;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    padding: 2em;
+    border-radius: 2em;
+    
+}
+
+input{
+    margin-bottom: 1em;
+    height: 3em;
+    border-radius: 1em;
+    padding: 0em 1em;
+}
+button{
+    background-color: #373737;
+    padding: 2em;
+
+}*/
