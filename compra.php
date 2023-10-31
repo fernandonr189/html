@@ -39,14 +39,16 @@
     $pdf->Ln(20);
     $pdf->Cell(60,20, "Total: ".$total." \$");
 
-    $pdf->Output("Compra.pdf","F");
+    $filename = "/pdf/" . $idUsuario . date("d-m-Y") . substr(md5(uniqid($idUsuario)), 0, 5) . "-Factura.pdf";
+
+    $pdf->Output("." . $filename,"F");
 
     $outlook_mail = new PHPMailer();
     $outlook_mail->IsSMTP();
     $outlook_mail->Host = 'smtp.office365.com';
     $outlook_mail->Port = 587;
     $outlook_mail->SMTPSecure = 'tls';
-    $outlook_mail->SMTPDebug = 2;
+    $outlook_mail->SMTPDebug = 0;
     $outlook_mail->SMTPAuth = true;
     $outlook_mail->Username = 'arteydisenotonala@outlook.com';
     $outlook_mail->Password = 'arteydiseno14';
@@ -60,7 +62,12 @@
     $outlook_mail->Subject = 'Recibo de compra';
     $outlook_mail->Body    = 'HTML_CONTENT';
     $outlook_mail->AltBody = 'This is the body in plain text for non-HTML mail clients at https://onlinecode.org/';
-    $outlook_mail->AddAttachment('Compra.pdf', '', $encoding = 'base64', $type = 'application/pdf');
+    $outlook_mail->AddAttachment("." . $filename, '', $encoding = 'base64', $type = 'application/pdf');
+    $res = array();
+    $exit_code = 0;
+    $route = "./bash/enviarPDF '/var/www/arteydiseno/" . $filename . "'";
+    exec($route, $res, $exit_code);
+    echo implode("\n", $res);
      
     if(!$outlook_mail->Send()) {
         echo 'Message could not be sent.';

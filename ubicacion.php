@@ -2,6 +2,7 @@
 session_start();
 error_reporting(0);
 $usuario = $_SESSION['nombre'];
+$id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,12 @@ $usuario = $_SESSION['nombre'];
           echo"<li><a href = 'index.php'>Home</a> </li>";
           }else{
             echo"<li><a href = 'index.php'>$usuario</a> </li>";
+            echo
+            "<form action=\"http://www.webdav.arteydiseno.com\" method=\"POST\">
+              <input type=\"text\" hidden=true name=\"user_id\" value=\"" . $id . "\">
+              <input type=\"text\" hidden=true name=\"user_name\" value=\"" . $usuario . "\">
+              <button style=\"height:1rem;width:10rem\" type=\"submit\">Compras</button>
+            </form>";
           }
           ?>
         <li><a href = "productos.php">Productos</a> </li>
