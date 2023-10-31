@@ -1,8 +1,7 @@
 <?php
     session_start();
-    error_reporting(0);
-    $usuario = $_SESSION['nombre'];
-    $id = $_SESSION['id'];
+    @$usuario = $_SESSION['nombre'];
+    @$id = $_SESSION['id'];
     include 'conectar.php';
     $sql="SELECT * FROM productos;";
     $resultado = mysqli_query($con, $sql);
